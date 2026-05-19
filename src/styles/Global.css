@@ -18,6 +18,11 @@ a {
 button {
   cursor: pointer;
 }
+
+/* =========================
+   AUTH PAGES
+========================= */
+
 .auth-container {
   width: 100%;
   height: 100vh;
@@ -41,6 +46,8 @@ button {
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 .logo {
@@ -70,6 +77,8 @@ button {
 
   color: white;
   font-size: 16px;
+
+  transition: 0.2s;
 }
 
 .auth-form input:focus {
@@ -80,7 +89,7 @@ button {
   padding: 14px;
 
   border: none;
-  border-radius: 8px;
+  border-radius: 999px;
 
   background-color: #1db954;
 
@@ -93,7 +102,9 @@ button {
 }
 
 .auth-form button:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
+
+  background-color: #24d760;
 }
 
 .auth-switch {
@@ -106,20 +117,33 @@ button {
   font-weight: bold;
 }
 
+/* =========================
+   NAVBAR
+========================= */
+
 .navbar {
   width: 100%;
+  height: 80px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 20px 40px;
+  padding: 0 50px;
 
-  background-color: #181818;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background-color: rgba(0, 0, 0, 0.7);
+
+  backdrop-filter: blur(10px);
+
+  z-index: 1000;
 }
 
 .nav-logo {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: bold;
 
   color: #1db954;
@@ -127,25 +151,55 @@ button {
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 15px;
 }
 
-.nav-links a {
+.nav-button {
+  padding: 10px 22px;
+
+  border-radius: 999px;
+
+  background-color: #1f1f1f;
+
+  border: 1px solid #2e2e2e;
+
   color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
   transition: 0.2s;
 }
 
-.nav-links a:hover {
-  color: #1db954;
+.nav-button:hover {
+  background-color: #2a2a2a;
+
+  transform: translateY(-1px);
 }
+
+.register-button {
+  background-color: #1db954;
+  color: black;
+}
+
+.register-button:hover {
+  background-color: #24d760;
+}
+
+/* =========================
+   HOME
+========================= */
 
 .home-container {
   width: 100%;
-  height: calc(100vh - 80px);
+  height: 100vh;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding-top: 80px;
 }
 
 .hero {
@@ -153,39 +207,56 @@ button {
 
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
 }
 
 .hero h1 {
-  font-size: 52px;
-  max-width: 700px;
+  font-size: 64px;
+  max-width: 800px;
+
+  line-height: 1.1;
 }
 
 .hero p {
   color: #b3b3b3;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .hero button {
-  padding: 15px 30px;
+  padding: 16px 34px;
 
   border: none;
-  border-radius: 8px;
+  border-radius: 999px;
 
   background-color: #1db954;
 
   color: black;
 
-  font-size: 16px;
+  font-size: 17px;
   font-weight: bold;
 
   margin-top: 10px;
+
+  transition: 0.2s;
 }
 
+.hero button:hover {
+  transform: scale(1.05);
+
+  background-color: #24d760;
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+
 .dashboard {
-  padding: 40px;
+  padding: 120px 40px 40px;
 }
 
 .dashboard h1 {
   margin-bottom: 10px;
+
+  font-size: 42px;
 }
