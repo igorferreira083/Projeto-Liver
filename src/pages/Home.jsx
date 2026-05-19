@@ -1,5 +1,8 @@
-import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom"
+import Navbar from "../components/Navbar"
+
+import MusicCard from "../components/MusicCard"
+import musicas from "../data/musicas"
 
 function Home() {
   return (
@@ -26,9 +29,25 @@ function Home() {
 
         </div>
 
+        <div
+          style={{
+            display: "flex",
+            gap: "20px",
+            flexWrap: "wrap",
+            padding: "30px"
+          }}
+        >
+          {musicas.map((musica) => (
+            <MusicCard
+              key={musica.id}
+              musica={musica}
+            />
+          ))}
+        </div>
+
       </div>
     </>
-  );
+  )
 }
 
-export default Home;
+export default Home
