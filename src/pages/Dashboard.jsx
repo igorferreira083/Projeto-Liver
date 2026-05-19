@@ -1,4 +1,7 @@
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar"
+import MusicCard from "../components/MusicCard"
+
+import musicas from "../data/musicas"
 
 function Dashboard() {
   return (
@@ -7,15 +10,22 @@ function Dashboard() {
 
       <div className="dashboard">
 
-        <h1>Seu Dashboard</h1>
+        <h1>Suas músicas</h1>
 
-        <p>
-          Suas músicas aparecerão aqui.
-        </p>
+        <div className="music-grid">
+
+          {musicas.map((musica) => (
+            <MusicCard
+              key={musica.id}
+              musica={musica}
+            />
+          ))}
+
+        </div>
 
       </div>
     </>
-  );
+  )
 }
 
-export default Dashboard;
+export default Dashboard

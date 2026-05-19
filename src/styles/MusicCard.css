@@ -34,3 +34,35 @@
   .music-card audio {
     width: 100%;
   }
+  .music-card {
+    width: 280px;
+  
+    background-color: #181818;
+  
+    border-radius: 16px;
+  
+    padding: 20px;
+  
+    display: flex;
+    flex-direction: column;
+  
+    gap: 15px;
+  
+    transition: 0.2s;
+  }
+  .music-card {
+    width: 280px;
+  
+    background-color: #181818;
+  
+    border-radius: 16px;
+  
+    padding: 20px;
+  
+    display: flex;
+    flex-direction: column;
+  
+    gap: 15px;
+  
+    transition: 0.2s;
+  }
