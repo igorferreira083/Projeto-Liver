@@ -1,33 +1,40 @@
-import { Link } from "react-router-dom"
-import Navbar from "../components/Navbar"
+import "../styles/home.css"
 
 function Home() {
   return (
-    <>
-      <Navbar />
+    <div className="home">
 
-      <div className="home-container">
+      <a href="/" className="home-logo">
+        Liver
+      </a>
 
-        <div className="hero">
+      <div className="home-content">
 
-          <h1>
-            Descubra novas músicas com o Liver
-          </h1>
+        <h1>
+          Sua plataforma de músicas favorita
+        </h1>
 
-          <p>
-            Sua plataforma moderna de streaming musical.
-          </p>
+        <p>
+          Escute suas músicas preferidas,
+          descubra novos artistas e aproveite
+          uma experiência moderna e imersiva.
+        </p>
 
-          <Link to="/register">
-            <button>
-              Começar agora
-            </button>
-          </Link>
+        <div className="home-buttons">
+
+          <a href="/login" className="home-btn">
+            Começar agora
+          </a>
+
+          <a href="/register" className="home-btn secondary">
+            Criar conta
+          </a>
 
         </div>
 
       </div>
-    </>
+
+    </div>
   )
 }
 

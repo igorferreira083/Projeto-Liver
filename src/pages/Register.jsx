@@ -1,39 +1,43 @@
-import { Link } from "react-router-dom";
+import "../styles/register.css"
 
 function Register() {
   return (
-    <div className="auth-container">
-      <div className="auth-box">
+    <div className="register-container">
 
-        <h1 className="logo">Liver</h1>
-        <p className="subtitle">Crie sua conta</p>
+      <a href="/" className="register-logo">
+        Liver
+      </a>
 
-        <form className="auth-form">
+      <div className="register-box">
 
-          <input
-            type="email"
-            placeholder="Digite seu email"
-          />
+        <h1>Registro</h1>
 
-          <input
-            type="password"
-            placeholder="Crie uma senha"
-          />
+        <input
+          type="email"
+          placeholder="Digite seu email"
+        />
 
-          <button type="submit">
-            Cadastrar
-          </button>
+        <input
+          type="password"
+          placeholder="Digite sua senha"
+        />
 
-        </form>
+        <button>
+          Criar conta
+        </button>
 
-        <p className="auth-switch">
-          Já possui conta?
-          <Link to="/login"> Fazer login</Link>
+        <p>
+          Já possui conta?{" "}
+
+          <a href="/login">
+            Fazer login
+          </a>
         </p>
 
       </div>
+
     </div>
-  );
+  )
 }
 
-export default Register;
+export default Register

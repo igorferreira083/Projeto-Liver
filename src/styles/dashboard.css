@@ -1,22 +1,47 @@
-body {
-  margin: 0;
-  background: #000;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
-}
-
-/* DASHBOARD */
-
 .dashboard {
   width: 100%;
+
   min-height: 100vh;
+
   padding: 30px;
+
+  background: #121212;
+
+  color: white;
+
   box-sizing: border-box;
 }
 
+/* NAVBAR */
+
+.dashboard-navbar {
+  width: 100%;
+
+  margin-bottom: 40px;
+}
+
+.dashboard-logo {
+  font-size: 2.2rem;
+
+  font-weight: bold;
+
+  color: #1db954;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.dashboard-logo:hover {
+  transform: scale(1.05);
+}
+
+/* TITULO */
+
 .dashboard-title {
-  margin-bottom: 30px;
+  font-size: 48px;
+
+  margin-bottom: 40px;
 }
 
 /* SEÇÕES */
@@ -25,53 +50,63 @@ body {
 .recommend-section,
 .artist-section {
   width: 100%;
-  margin-bottom: 50px;
+
+  margin-bottom: 60px;
 }
 
 .top-section h2,
 .recommend-section h2,
 .artist-section h2 {
   margin-bottom: 20px;
+
+  font-size: 28px;
 }
 
 /* CARROSSEL */
 
 .carousel {
   display: flex;
-  flex-direction: row;
+
   gap: 20px;
 
-  width: 100%;
-
   overflow-x: auto;
+
   overflow-y: hidden;
 
   padding-bottom: 10px;
-
-  align-items: stretch;
 
   scrollbar-width: thin;
 }
 
 .carousel-card {
-  width: 300px;
-  min-width: 300px;
-  height: 180px;
+  width: 320px;
+
+  min-width: 320px;
+
+  height: 200px;
+
+  position: relative;
 
   border-radius: 20px;
 
   overflow: hidden;
 
-  position: relative;
-
   background: #181818;
 
   flex-shrink: 0;
+
+  transition: 0.3s;
+}
+
+.carousel-card:hover {
+  transform: scale(1.03);
 }
 
 .carousel-card img {
   width: 100%;
+
   height: 100%;
+
   object-fit: cover;
 }
 
@@ -90,57 +125,54 @@ body {
   );
 }
 
-/* GRID MÚSICAS */
+.carousel-info h3 {
+  margin: 0;
+
+  font-size: 22px;
+}
+
+.carousel-info p {
+  margin-top: 5px;
+
+  color: #b3b3b3;
+}
+
+/* MUSICAS */
 
 .music-grid {
   display: flex;
 
-  flex-direction: row;
-
   gap: 20px;
 
-  width: 100%;
-
   overflow-x: auto;
+
   overflow-y: hidden;
 
   padding-bottom: 10px;
 
-  align-items: stretch;
-
-  flex-wrap: nowrap;
-
   scrollbar-width: thin;
 }
 
-/* GRID ARTISTAS */
+/* ARTISTAS */
 
 .artist-grid {
   display: flex;
 
-  flex-direction: row;
-
   gap: 20px;
 
-  width: 100%;
-
   overflow-x: auto;
+
   overflow-y: hidden;
 
   padding-bottom: 10px;
 
-  align-items: stretch;
-
-  flex-wrap: nowrap;
-
   scrollbar-width: thin;
 }
 
-/* CARD ARTISTA */
-
 .artist-card {
-  width: 180px;
-  min-width: 180px;
+  width: 190px;
+
+  min-width: 190px;
 
   background: #181818;
 
@@ -150,22 +182,31 @@ body {
 
   text-align: center;
 
-  transition: 0.3s;
-
   flex-shrink: 0;
+
+  transition: 0.3s;
 }
 
 .artist-card:hover {
-  transform: scale(1.05);
+  background: #242424;
+
+  transform: scale(1.04);
 }
 
 .artist-card img {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+
+  height: 130px;
 
   border-radius: 50%;
 
   object-fit: cover;
 
   margin-bottom: 15px;
+}
+
+.artist-card h3 {
+  margin: 0;
+
+  font-size: 20px;
 }

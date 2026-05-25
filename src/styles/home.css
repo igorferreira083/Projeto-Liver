@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home {
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #1db954 0%,
+      #121212 100%
+    );
+
+  color: white;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 40px;
+}
+
+.home-logo {
+  position: absolute;
+
+  top: 30px;
+  left: 40px;
+
+  font-size: 2.5rem;
+
+  font-weight: bold;
+
+  color: white;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.home-logo:hover {
+  transform: scale(1.05);
+}
+
+.home-content {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  max-width: 900px;
+}
+
+.home-content h1 {
+  font-size: 5rem;
+
+  line-height: 1.1;
+
+  margin-bottom: 25px;
+}
+
+.home-content p {
+  font-size: 1.3rem;
+
+  color: #d1d5db;
+
+  line-height: 1.7;
+
+  margin-bottom: 45px;
+}
+
+.home-buttons {
+  display: flex;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+}
+
+.home-btn {
+  background: #1db954;
+
+  color: white;
+
+  text-decoration: none;
+
+  padding: 16px 34px;
+
+  border-radius: 999px;
+
+  font-size: 18px;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.home-btn:hover {
+  transform: scale(1.05);
+
+  background: #1ed760;
+}
+
+.home-btn.secondary {
+  background: transparent;
+
+  border: 2px solid #1db954;
+}
+
+.home-btn.secondary:hover {
+  background: rgba(29, 185, 84, 0.1);
+}
+
+@media (max-width: 768px) {
+
+  .home-content h1 {
+    font-size: 3rem;
+  }
+
+  .home-content p {
+    font-size: 1.1rem;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .home-btn {
+    width: 100%;
+  }
+
+}

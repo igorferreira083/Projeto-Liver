@@ -1,39 +1,43 @@
-import { Link } from "react-router-dom";
+import "../styles/login.css"
 
 function Login() {
   return (
-    <div className="auth-container">
-      <div className="auth-box">
+    <div className="login-container">
 
-        <h1 className="logo">Liver</h1>
-        <p className="subtitle">Entre na sua conta</p>
+      <a href="/" className="login-logo">
+        Liver
+      </a>
 
-        <form className="auth-form">
+      <div className="login-box">
 
-          <input
-            type="email"
-            placeholder="Digite seu email"
-          />
+        <h1>Login</h1>
 
-          <input
-            type="password"
-            placeholder="Digite sua senha"
-          />
+        <input
+          type="email"
+          placeholder="Digite seu email"
+        />
 
-          <button type="submit">
-            Entrar
-          </button>
+        <input
+          type="password"
+          placeholder="Digite sua senha"
+        />
 
-        </form>
+        <button>
+          Entrar
+        </button>
 
-        <p className="auth-switch">
-          Não possui conta?
-          <Link to="/register"> Criar conta</Link>
+        <p>
+          Não possui conta?{" "}
+
+          <a href="/register">
+            Registrar
+          </a>
         </p>
 
       </div>
+
     </div>
-  );
+  )
 }
 
-export default Login;
+export default Login
