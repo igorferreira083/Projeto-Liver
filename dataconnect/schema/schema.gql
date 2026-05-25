@@ -1,0 +1,50 @@
+type User @table {
+  username: String!
+  email: String!
+  createdAt: Timestamp!
+  profilePictureUrl: String
+}
+
+type Artist @table {
+  name: String!
+  bio: String
+  genre: String
+}
+
+type Album @table {
+  title: String!
+  releaseYear: Int!
+  coverArtUrl: String
+  genre: String
+  artist: Artist
+}
+
+type Song @table {
+  title: String!
+  filePath: String!
+  durationSeconds: Int!
+  trackNumber: Int
+  genre: String
+  artist: Artist
+  album: Album
+}
+
+type Playlist @table {
+  name: String!
+  createdAt: Timestamp!
+  description: String
+  user: User
+}
+
+type PlaylistSong @table(key: ["playlist", "song"]) {
+  position: Int!
+  addedAt: Timestamp!
+  playlist: Playlist!
+  song: Song!
+}
+
+type ListenEvent @table {
+  listenedAt: Timestamp!
+  user: User
+  song: Song
+}

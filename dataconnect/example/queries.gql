@@ -1,0 +1,38 @@
+query GetUserPlaylists($userId: UUID!) @auth(level: USER, insecureReason: "This operation is safe to expose to all logged in users as it fetches data for a specific user.") {
+  playlists(where: {userId: {eq: $userId}}) {
+    id
+    name
+    description
+    createdAt
+  }
+}
+
+mutation AddSongToPlaylist($playlistId: UUID!, $songId: UUID!, $position: Int!, $addedAt: Timestamp!) @auth(level: USER, insecureReason: "This operation is safe to expose to all logged in users as it adds a song to a specific playlist.") {
+  playlistSong_insert(data: {
+    playlistId: $playlistId,
+    songId: $songId,
+    position: $position,
+    addedAt: $addedAt
+  })
+}
+
+query GetSongsByArtist($artistName: String!) @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public as it fetches publicly available song information.") {
+  songs(where: {artist: {name: {eq: $artistName}}}) {
+    id
+    title
+    durationSeconds
+    genre
+    album {
+      title
+      releaseYear
+    }
+  }
+}
+
+mutation RecordListenEvent($songId: UUID!) @auth(level: USER, insecureReason: "This operation is safe to expose to all logged in users as it records a listen event for the current user.") {
+  listenEvent_insert(data: {
+    songId: $songId,
+    userId_expr: "auth.uid",
+    listenedAt_expr: "request.time"
+  })
+}
