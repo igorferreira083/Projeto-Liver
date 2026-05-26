@@ -12,13 +12,17 @@ function Dashboard() {
     {
       nome: "Drake",
       imagem:
-        "https://i.scdn.co/image/ab6761610000e5eb4293385d324db8558179afd9"
+        "https://i.scdn.co/image/ab6761610000e5eb4293385d324db8558179afd9",
+
+        link: "https://www.youtube.com/@DrakeOfficial/featured"
     },
 
     {
       nome: "Travis Scott",
       imagem:
-        "https://i.scdn.co/image/ab6761610000e5eb19c2790744c792d05570bb71"
+        "https://i.scdn.co/image/ab6761610000e5eb19c2790744c792d05570bb71",
+
+        link: "https://www.youtube.com/@TravisScottXX/featured"
     }
   ]
 
@@ -90,17 +94,23 @@ function Dashboard() {
         <div className="artist-grid">
 
           {artistas.map((artista, index) => (
-            <div className="artist-card" key={index}>
+  <a
+    href={artista.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="artist-card"
+    key={index}
+  >
 
-              <img
-                src={artista.imagem}
-                alt={artista.nome}
-              />
+    <img
+      src={artista.imagem}
+      alt={artista.nome}
+    />
 
-              <h3>{artista.nome}</h3>
+    <h3>{artista.nome}</h3>
 
-            </div>
-          ))}
+  </a>
+))}
 
         </div>
 
